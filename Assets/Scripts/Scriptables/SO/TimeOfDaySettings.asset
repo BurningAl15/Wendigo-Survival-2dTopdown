@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ca7e9002bda41ac87529124f01e81bb, type: 3}
+  m_Name: TimeOfDaySettings
+  m_EditorClassIdentifier: Assembly-CSharp::TimeOfDaySettings
+  dayDuration: 100
+  nightDuration: 50
+  globalLightCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.1
+      value: 0.4
+      inSlope: 3.7542126
+      outSlope: 3.7542126
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.046662692
+    - serializedVersion: 3
+      time: 0.33
+      value: 1
+      inSlope: 0.044106096
+      outSlope: 0.044106096
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.070677824
+    - serializedVersion: 3
+      time: 0.57
+      value: 0.4
+      inSlope: -3.0762687
+      outSlope: -3.0762687
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14774022
+    - serializedVersion: 3
+      time: 0.67
+      value: 0
+      inSlope: 0.01129568
+      outSlope: 0.01129568
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.262379
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9995117
+      value: 0
+      inSlope: -0.04330411
+      outSlope: -0.04330411
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.018338224
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  globalMinIntensity: 0.02
+  globalMaxIntensity: 1
+  torchLightCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.8
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.1
+      value: 0.4
+      inSlope: -4.440338
+      outSlope: -4.440338
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.05259452
+    - serializedVersion: 3
+      time: 0.33
+      value: 0.1
+      inSlope: -0.029414713
+      outSlope: -0.029414713
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.051411368
+    - serializedVersion: 3
+      time: 0.57
+      value: 0.4
+      inSlope: 2.4786568
+      outSlope: 2.4786568
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.08602175
+    - serializedVersion: 3
+      time: 0.75
+      value: 1
+      inSlope: 0.21704474
+      outSlope: 0.21704474
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.11424753
+      outWeight: 0.08387089
+    - serializedVersion: 3
+      time: 1
+      value: 0.8
+      inSlope: -2.1954908
+      outSlope: -2.1954908
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.06774211
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  torchMinIntensity: 0.1
+  torchMaxIntensity: 1.2
+  flickerSpeed: 10
+  flickerStrength: 0.2
+  dawnStart: 0.1
+  dayStart: 0.25
+  duskStart: 0.65
+  nightStart: 0.8
+  seasons:
+  - season: 0
+    daysInSeason: 10
+  - season: 1
+    daysInSeason: 5
+  - season: 2
+    daysInSeason: 5
+  - season: 3
+    daysInSeason: 5
