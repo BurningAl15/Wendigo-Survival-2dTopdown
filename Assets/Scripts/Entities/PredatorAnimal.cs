@@ -42,6 +42,9 @@ public class PredatorAnimal : LivingEntity
 
         isChasing = dist <= detectionRadius;
 
+        bool wantsSprint = isChasing && CurrentStamina > 0.1f;
+        UpdateStamina(wantsSprint, Time.deltaTime);
+
         if (isChasing && dist <= attackRange && Time.time >= nextAttackTime)
         {
             AttackPlayer();

@@ -9,10 +9,21 @@ public class GameProgressionIntegration : MonoBehaviour
 
     private void Start()
     {
-        if (daytimeManager != null)
+        if (daytimeManager == null)
         {
-            lastPhase = daytimeManager.CurrentPhase;
+            Debug.LogError("GameProgressionIntegration: DaytimeManager not assigned!");
+            enabled = false;
+            return;
         }
+
+        if (progressionManager == null)
+        {
+            Debug.LogError("GameProgressionIntegration: GameProgressionManager not assigned!");
+            enabled = false;
+            return;
+        }
+
+        lastPhase = daytimeManager.CurrentPhase;
     }
 
     private void Update()
@@ -23,6 +34,7 @@ public class GameProgressionIntegration : MonoBehaviour
         if (lastPhase == DaytimePhase.Night && daytimeManager.CurrentPhase == DaytimePhase.Dawn)
         {
             progressionManager.AdvanceDay();
+            Debug.Log($"New day started! Day {progressionManager.CurrentDay}");
         }
 
         lastPhase = daytimeManager.CurrentPhase;

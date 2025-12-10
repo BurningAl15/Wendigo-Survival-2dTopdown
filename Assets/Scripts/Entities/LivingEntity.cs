@@ -32,6 +32,14 @@ public abstract class LivingEntity : MonoBehaviour
         }
     }
 
+    public virtual void Heal(float amount)
+    {
+        if (IsDead) return;
+
+        CurrentHealth += amount;
+        CurrentHealth = Mathf.Clamp(CurrentHealth, 0f, maxHealth);
+    }
+
     protected virtual void Die()
     {
         Destroy(gameObject);

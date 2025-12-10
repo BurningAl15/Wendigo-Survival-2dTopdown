@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerCombat))]
 [RequireComponent(typeof(PlayerTargetLock))]
 [RequireComponent(typeof(LivingEntity))]
-public class TopDownPlayerController : LivingEntity
+[RequireComponent(typeof(HungerSystem))]
+public class TopDownPlayerController : MonoBehaviour
 {
     private PlayerMovement movement;
     private PlayerRotation rotation;
