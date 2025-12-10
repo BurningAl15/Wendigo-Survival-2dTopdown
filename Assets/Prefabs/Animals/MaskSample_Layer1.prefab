@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8075304122397637153}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.66, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -81,12 +81,12 @@ SpriteMask:
   m_SortingOrder: 0
   m_Sprite: {fileID: 2090102861, guid: ba8f57e907cd542b9828c2a2272327c5, type: 3}
   m_MaskAlphaCutoff: 0.2
-  m_FrontSortingLayerID: -1517479349
-  m_BackSortingLayerID: 2142171543
+  m_FrontSortingLayerID: 887755927
+  m_BackSortingLayerID: 1384972181
   m_FrontSortingLayer: 3
   m_BackSortingLayer: 1
-  m_FrontSortingOrder: -8
-  m_BackSortingOrder: -10
+  m_FrontSortingOrder: 0
+  m_BackSortingOrder: 0
   m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
   m_MaskSource: 0
