@@ -17,7 +17,7 @@ public class PlayerCombat : MonoBehaviour
     private static readonly int ShootIndexHash = Animator.StringToHash("shootIndex");
 
     private bool isAttackHeld;
-    private int currentFirePointIndex = 0;
+    private int currentFirePointIndex = -1;
 
     private WeaponBase CurrentWeapon =>
         weapons != null && weapons.Count > 0 &&
@@ -50,16 +50,13 @@ public class PlayerCombat : MonoBehaviour
 
     public void SetAttackHeld(bool held)
     {
-        isAttackHeld = held;
-        
-        if (!held)
+        if (held)
         {
-            currentFirePointIndex = 0;
-            
-            if (animator != null)
-            {
-                animator.SetInteger(ShootIndexHash, -1);
-            }
+            isAttackHeld = true;
+        }
+        else
+        {
+            isAttackHeld = false;
         }
     }
 

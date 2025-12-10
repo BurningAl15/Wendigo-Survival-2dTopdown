@@ -13,18 +13,18 @@ public class TopDownPlayerController : LivingEntity
     private PlayerCombat combat;
     private PlayerTargetLock targetLock;
     private LivingEntity livingEntity;
+    private HungerSystem hungerSystem;
     
     private GameInputSystem input;
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
-        
         movement = GetComponent<PlayerMovement>();
         rotation = GetComponent<PlayerRotation>();
         combat = GetComponent<PlayerCombat>();
         targetLock = GetComponent<PlayerTargetLock>();
         livingEntity = GetComponent<LivingEntity>();
+        hungerSystem = GetComponent<HungerSystem>();
         
         input = new GameInputSystem();
     }
@@ -72,7 +72,7 @@ public class TopDownPlayerController : LivingEntity
         livingEntity.UpdateStamina(wantsSprint, Time.deltaTime);
 
         rotation.SetTargetLock(targetLock.IsTargeting ? targetLock.CurrentTarget : null);
-    
+        
         DetectInputDevice();
     }
 
@@ -90,7 +90,6 @@ public class TopDownPlayerController : LivingEntity
             rotation.SetLookInput(gamepad.rightStick.ReadValue(), gamepad);
         }
     }
-
 
     private void OnMove(InputAction.CallbackContext ctx)
     {

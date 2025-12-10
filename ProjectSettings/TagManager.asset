@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Predator
+  - Prey
+  - Human
   layers:
   - Default
   - TransparentFX
@@ -41,8 +44,26 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Layer1
+    uniqueID: 2142171543
+    locked: 0
+  - name: Layer2
+    uniqueID: 3430384083
+    locked: 0
+  - name: Layer3
+    uniqueID: 2777487947
+    locked: 0
+  - name: Character
+    uniqueID: 1360488871
+    locked: 0
+  - name: Trees
+    uniqueID: 3504239179
+    locked: 0
   - name: UI
     uniqueID: 2135843129
     locked: 0
   m_RenderingLayers:
   - Default
+  - Layer 1
+  - Layer 2
+  - Layer 3

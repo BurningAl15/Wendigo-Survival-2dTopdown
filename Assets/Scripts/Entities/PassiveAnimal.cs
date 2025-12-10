@@ -15,6 +15,8 @@ public class PassiveAnimal : LivingEntity
     private Rigidbody2D rb;
     private Transform player;
 
+    [SerializeField] private GameObject meatDropPrefab;
+
     private bool isFleeing;
 
     protected override void Awake()
@@ -85,4 +87,14 @@ public class PassiveAnimal : LivingEntity
             rb.rotation = angle - 90f;
         }
     }
+    
+    protected override void Die()
+    {
+        if (meatDropPrefab != null)
+        {
+            Instantiate(meatDropPrefab, transform.position, Quaternion.identity);
+        }
+        base.Die();
+    }
+
 }
